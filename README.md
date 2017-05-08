@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails Version: 5.1.0
 
-Things you may want to cover:
+Ruby Version: 2.4.1
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run ```rake db:migrate``` to migrate the database and ```rake db:seed``` to seed the data from the source, then ```rails s``` to start the server.
