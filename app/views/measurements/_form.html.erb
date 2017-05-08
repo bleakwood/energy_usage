@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th class="col-md-2">Building</th>
+						<th class="col-md-1">Year</th>
+						<% @units.each do |unit| %>
+							<th class="col-md-1"> <%= unit.unit_type %> </th>
+						<% end %>
+					</tr>
+				<thead>
+				<tbody>
+					<% @building_year_pairs.each do |byp| %>
+						<tr>
+						<td class="col-md-2"><%= @buildings[byp.building_id].first.name%></td>
+						<td class="col-md-1"><%= byp.year %></td>
+						<% @units.each do |unit| %>
+							<td class="col-md-1"><%= measurements_by_year_and_unit(@measurements[byp.building_id], byp.year, unit) %></td>
+						<% end %>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</thead>
+</div>
